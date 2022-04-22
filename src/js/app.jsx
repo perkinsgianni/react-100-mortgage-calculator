@@ -60,7 +60,7 @@ export default class App extends React.Component {
   //     </tr>`
   // }
 
-  // click event handler(s)
+  // click event handler
   handleClick(e) {
     e.preventDefault();
 
@@ -74,20 +74,6 @@ export default class App extends React.Component {
       payment: `$${payment} is your monthly payment.`
     });
   }
-
-  // handleReset(e) {
-  //   e.preventDefault();
-
-  //   let balance = '';
-  //   let rate = '';
-  //   let term = '';
-  //   let payment = '';
-   
-  //   // bind result to div with "output" id
-  //   this.setState({
-  //     payment: ''
-  //   });
-  // }
 
   render() {
     return (
@@ -166,30 +152,10 @@ export default class App extends React.Component {
             </div>
           </div>
 
-          {/* reset button */}
-          {/* <div className="form-group">
-            <div className="col-md-offset-2 col-md-10">
-              <button 
-                name="reset" 
-                onClick={this.handleReset}
-                className="btn btn-primary"
-              >
-                Reset
-              </button>
-            </div>
-          </div> */}
-
           {/* output display */}
           <div id="output" name="output" className="d-print-inline-block">
             {this.state.payment}
           </div>
-
-          {/* table */}
-          {/* <div id="table" name="table" className="d-print-inline-block">
-            <table>
-              {this.amortizationSchedule()}
-            </table>
-          </div> */}
         </form>
       </div>
     );
