@@ -69,7 +69,7 @@ export default class App extends React.Component {
     let term = this.state.term;
     let payment = this.calculatePayment(balance, rate, term);
    
-    // bind result to div with "output" id
+    // update state value
     this.setState({
       payment: `$${payment} is your monthly payment.`
     });
