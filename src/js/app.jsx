@@ -4,6 +4,7 @@ export default class App extends React.Component {
   // initialize state
   constructor(props) {
     super(props);
+    
     this.state = {
       balance: '',
       rate: '',
