@@ -43,8 +43,8 @@ export default class App extends React.Component {
   calculatePayment(balance, rate, term) {
     const r = rate / 100 / 12;
     const n = term * 12;
-    const numerator = (r * (1 + r)) ** n;
-    const denominator = (1 + r) ** (n - 1);
+    const numerator = r * (1 + r) ** n;
+    const denominator = (1 + r) ** n - 1;
 
     return parseFloat(balance * (numerator / denominator)).toFixed(2);
   }
