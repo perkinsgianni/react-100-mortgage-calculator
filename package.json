@@ -3,12 +3,21 @@
   "version": "0.1.0",
   "description": "Base application setup for creating a new react project.",
   "main": "server/index.js",
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,jsx"
+    }
+  },
   "scripts": {
     "build": "npm run less && webpack --mode development",
     "start": "node server/index.js",
     "less": "lessc src/css/style.less dist/css/style.css",
     "lint": "eslint .",
-    "test": "npm run build && mocha test/.setup.js test/*.spec.js --exit"
+    "test": "npm run build && mocha test/.setup.js test/*.spec.js --exit",
+    "watch": "npm-watch"
   },
   "dependencies": {
     "axios": "^0.16.1",
@@ -25,9 +34,11 @@
     "morgan": "^1.8.1",
     "nightmare": "^3.0.1",
     "nightmare-react-utils": "^1.0.4",
+    "npm-watch": "^0.11.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "serve-favicon": "^2.0.1",
+    "watch": "^1.0.2",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3"
   },
